@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:plants_project/constants.dart';
-import 'package:plants_project/ui/login.dart';
 import 'package:plants_project/ui/scan_page.dart';
 import 'package:plants_project/ui/screens/cart_page.dart';
 import 'package:plants_project/ui/screens/favorite_page.dart';

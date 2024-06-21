@@ -3,7 +3,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:plants_project/constants.dart';
 import 'package:plants_project/root_page.dart';
-import 'package:plants_project/ui/login.dart';
 
 class OnBoardScreen extends StatefulWidget {
   const OnBoardScreen({super.key});

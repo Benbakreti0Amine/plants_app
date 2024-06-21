@@ -33,7 +33,7 @@ class Plant {
         price: 22,
         category: 'Indoor',
         plantName: 'Sanseviera',
-        size: 'Small',
+        size: 'large',
         rating: 4.5,
         humidity: 34,
         temperature: '23 - 34',
