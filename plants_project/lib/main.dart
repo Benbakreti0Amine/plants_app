@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:plants_project/ui/screens/signin_page.dart';
+import 'package:plants_project/ui/screens/signup.dart';
 
 
 void main() {
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Plants Demo',
-      home:  SigninPage(),
+      home:  SignUp(),
     );
   }
 }
