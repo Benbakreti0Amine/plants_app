@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:plants_project/ui/on_board_screen.dart';
+
+import 'package:plants_project/ui/screens/signin_page.dart';
 
 
 void main() {
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Plants Demo',
-      home:  OnBoardScreen(),
+      home:  SigninPage(),
     );
   }
 }

@@ -165,6 +165,34 @@ class Plant {
         isSelected: false),
   ];
 
+  static List<Plant> getFavoritedPlants(){
+
+    List<Plant> _plants = Plant.plantList;
+    return _plants.where((x) => x.isFavorated == true).toList();
+  }
+
+  static List<Plant> addedToCartPlants(){
+
+    List<Plant> _plants = Plant.plantList;
+    return _plants.where((x) => x.isSelected == true).toList();
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   // //Get the favorated items
   // static List<Plant> getFavoritedPlants(){
   //   List<Plant> _travelList = Plant.plantList;

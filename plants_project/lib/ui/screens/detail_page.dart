@@ -48,7 +48,8 @@ class _DetailPageState extends State<DetailPage> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          attributes(title: "Size", feature: selectedPlant.size),
+                          attributes(
+                              title: "Size", feature: selectedPlant.size),
                           attributes(
                               title: "Humidity",
                               feature: selectedPlant.humidity.toString()),
@@ -59,93 +60,118 @@ class _DetailPageState extends State<DetailPage> {
                       ),
                     ),
                   ),
-                  
-                  
                 ],
               ),
             ),
           ),
           Positioned(
-                    bottom: 0,
-                    left: 0,
-                    right: 0,
-                    child: Container(
-                      padding: const EdgeInsets.only(top: 80, left: 30, right: 30),
-                      height: size.height * .5,
-                      width: size.width,
-                      decoration: BoxDecoration(
-                        color: Constants.primaryColor.withOpacity(.4),
-                        borderRadius: const BorderRadius.only(
-                          topRight: Radius.circular(30),
-                          topLeft: Radius.circular(30),
-                        ),
-                      ),
-                      child: Column(
+            bottom: 0,
+            left: 0,
+            right: 0,
+            child: Container(
+              padding: const EdgeInsets.only(top: 80, left: 30, right: 30),
+              height: size.height * .5,
+              width: size.width,
+              decoration: BoxDecoration(
+                color: Constants.primaryColor.withOpacity(.4),
+                borderRadius: const BorderRadius.only(
+                  topRight: Radius.circular(30),
+                  topLeft: Radius.circular(30),
+                ),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    selectedPlant.plantName,
-                                    style: TextStyle(
-                                      color: Constants.primaryColor,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 30.0,
-                                    ),
-                                  ),
-                                  const SizedBox(
-                                    height: 10,
-                                  ),
-                                  Text(
-                                    r'$' + selectedPlant.price.toString(),
-                                    style: TextStyle(
-                                      color: Constants.blackColor,
-                                      fontSize: 24.0,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              Row(
-                                children: [
-                                  Text(
-                                    selectedPlant.rating.toString(),
-                                    style: TextStyle(
-                                      fontSize: 30.0,
-                                      color: Constants.primaryColor,
-                                    ),
-                                  ),
-                                  Icon(
-                                    Icons.star,
-                                    size: 30.0,
-                                    color: Constants.primaryColor,
-                                  ),
-                                ],
-                              ),
-                            ],
+                          Text(
+                            selectedPlant.plantName,
+                            style: TextStyle(
+                              color: Constants.primaryColor,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 30.0,
+                            ),
                           ),
                           const SizedBox(
+                            height: 10,
+                          ),
+                          Text(
+                            r'$' + selectedPlant.price.toString(),
+                            style: TextStyle(
+                              color: Constants.blackColor,
+                              fontSize: 24.0,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            selectedPlant.rating.toString(),
+                            style: TextStyle(
+                              fontSize: 30.0,
+                              color: Constants.primaryColor,
+                            ),
+                          ),
+                          Icon(
+                            Icons.star,
+                            size: 30.0,
+                            color: Constants.primaryColor,
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
                     height: 5.0,
                   ),
                   Expanded(
-                    child: Text(
-                      selectedPlant.decription,
-                      textAlign: TextAlign.justify,
-                      style: TextStyle(
-                        height: 1.5,
-                        fontSize: 18,
-                        color: Constants.blackColor.withOpacity(0.7),
-                      ),)
+                      child: Text(
+                    selectedPlant.decription,
+                    textAlign: TextAlign.justify,
+                    style: TextStyle(
+                      height: 1.5,
+                      fontSize: 18,
+                      color: Constants.blackColor.withOpacity(0.7),
                     ),
-                        ],
-                      ),
-                    ),
-                  ),       
+                  )),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Container(
+                          padding: EdgeInsets.all(10),
+                          margin: EdgeInsets.only(bottom: 20),
+                          child: Icon(Icons.shopping_basket, size: 30),
+                          decoration: BoxDecoration(
+                              color: Constants.primaryColor,
+                              shape: BoxShape.circle)),
+                      Container(
+
+                        padding: EdgeInsets.all(10),
+                          margin: EdgeInsets.only(bottom: 20),
+                          width: size.width*0.4,
+                          child: Center(
+                            child: Text("BUYNOW",style: TextStyle(
+                              fontSize: 20
+                            ),),
+                          ),
+                          decoration: BoxDecoration(
+                              color: Constants.primaryColor,
+                              borderRadius: BorderRadius.circular(5))
+                      )
+                    ],
+                  )
+                ],
+              ),
+            ),
+          ),
         ],
       ),
     );
@@ -221,9 +247,7 @@ class appbar extends StatelessWidget {
             ),
           ),
           GestureDetector(
-            onTap: () {
-              // Handle favorite button tap
-            },
+            onTap: () {},
             child: Container(
               alignment: Alignment.center,
               padding: EdgeInsets.all(10),

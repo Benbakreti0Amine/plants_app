@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:plants_project/constants.dart';
 import 'package:plants_project/root_page.dart';
+import 'package:plants_project/ui/screens/signin_page.dart';
 
 class OnBoardScreen extends StatefulWidget {
   const OnBoardScreen({super.key});
@@ -51,7 +52,7 @@ class _OnBoardScreenState extends State<OnBoardScreen> {
             padding: EdgeInsets.fromLTRB(0, 10, 20, 0),
             child: InkWell(
               onTap: () {
-                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=>const RootPage()));
+                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=>const SigninPage()));
               },
               child: Text(
                 "Skip",
@@ -113,7 +114,7 @@ class _OnBoardScreenState extends State<OnBoardScreen> {
                       }
                     }
                     else{
-                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=>const RootPage()));
+                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=>const SigninPage()));
                   }});
                 },
                 icon: Icon(
